@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "Tools2Go",
+    "slug": "Tools2Go",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./app/assets/images/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./app/assets/images/splash.jpg",
+      "resizeMode": "cover",
+      "backgroundColor": "#e63c4b"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./app/assets/images/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "permissions": ["WRITE_EXTERNAL_STORAGE", "READ_EXTERNAL_STORAGE"]
+    },
+    "web": {
+      "favicon": "./app/assets/images/favicon.png"
+    },
+    "extra": {
+      "supportsRTL": true,
+      "bugsnag": {
+        "apiKey": "ed162e8e09bf515a03fdf1609e53b6d2"
+      }
+    },
+    "plugins": ["expo-localization"],
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "@bugsnag/expo/hooks/post-publish.js",
+          "config": {}
+        }
+      ]
+    }
+  }
+}
